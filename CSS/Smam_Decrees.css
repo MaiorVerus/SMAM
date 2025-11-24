@@ -42,7 +42,7 @@ hr {
   MAIN|              
 -----------------------------------------*/
 main {
-    background-image: url(Images/law-library.webp);
+    background-image: url(/Images/law-library.webp);
     background-size: cover;
     height: 100vh; /*will be removed later*/
 }

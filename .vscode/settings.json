@@ -1,0 +1,7 @@
+{
+    "telemetry.editStats.details.enabled": false,
+    "telemetry.editStats.enabled": false,
+    "telemetry.feedback.enabled": false,
+    "geminicodeassist.enableTelemetry": false,
+    "editor.experimental.asyncTokenization": false
+}

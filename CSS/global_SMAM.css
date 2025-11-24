@@ -11,6 +11,9 @@ html {
 
 :root {
   --border-radius: 1rem;
+  --border-thickness: 0.09rem;
+  --box-shadow: 0 7px 17px rgba(91, 140, 255, 0.12);
+
 }
 
 /*---------------------------------------
@@ -39,16 +42,18 @@ a {
 }
 
 hr {
-  height: 0.4rem;
+  height: 0.1rem;
   /* border: none; */
 }
+
 .fa-facebook {
-    color: rgb(23, 23, 253);
+  color: rgb(23, 23, 253);
 }
 
 .fa-whatsapp {
-    color: rgb(5, 252, 5);
+  color: rgb(5, 252, 5);
 }
+
 /*---------------------------------------
   DROPDOWN STYLING |
   ---------------------*/
@@ -105,22 +110,33 @@ div.dropdown a {
   FOOTER STYLING     |          
 -----------------------------------------*/
 footer {
-    background-color: black;
-    color: rgb(255, 254, 254);
-    padding: 1rem;
+  background-color: black;
+  color: rgb(255, 254, 254);
+  padding: 1rem;
 }
 
 .footer-wrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .footer-right {
-    margin: 1rem 2rem 1rem 0rem;
-    padding-left: 2rem;
-    border-left: white 0.01rem solid;
+  margin: 1rem 2rem 1rem 0rem;
+  padding-left: 2rem;
+  border-left: white 0.01rem solid;
+}
+
+footer img {
+  width: 10rem;
 }
 
 footer p.copyright {
-    font-size: 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
 }

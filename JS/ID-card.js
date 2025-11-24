@@ -5,6 +5,8 @@
  * func3 generates the SMAM ID and fills it in the ID number placeholder
  */
 
+// const { use } = require("react");
+
 //getting applicants data from the form
 const form = document.getElementById('id-form');
 const generateIdBtn = document.getElementById('generate-id-btn');
@@ -19,7 +21,7 @@ let outputPosition = document.getElementById('user-position');
 let outputLocation = document.getElementById('user-location');
 let outputPhoto = document.querySelector('.photo img');
 let outputIdNum = document.getElementById('user-id-number');
-
+const downloadBtn = document.getElementById('download-btn');
 
 //Event listener for form submission
 form.addEventListener('submit', (e) => {
@@ -30,17 +32,15 @@ form.addEventListener('submit', (e) => {
 }
 );
 
-function emptyPlaceholders(params) {
+function emptyPlaceholders() {
     outputName.textContent = "";
     outputPosition.textContent = "";
     outputLocation.textContent = "";
     outputIdNum.textContent = "";
-    document.querySelector(".photo").textContent = "";
+    outputPhoto.src = "";
+    document.querySelector(".photo span").textContent = "";
 }
 
-let a =   document.querySelector(".photo").textContent;
-a = "hello";
-console.log(a);
 
 
 function fillEmpties() {
@@ -50,14 +50,14 @@ function fillEmpties() {
     outputIdNum.textContent = generateSMAMId();
     const photoFile = applicantPhoto.files[0];
 
-
-    console.log("Placeholders filled", outputIdNum.textContent, "well"); //to debug
+    console.log("Placeholders filled", outputIdNum.textContent, "well");
     const photoURL = URL.createObjectURL(photoFile);
     outputPhoto.src = photoURL;
+    
+    // Show download button after ID is generated
+    downloadBtn.style.display = 'block';
 }
 
-
-//function to generate SMAM ID
 function generateSMAMId() {
     const prefixes = ['BT', 'LL', 'MZ', 'ZB', 'KU', 'NK', 'KS'];
     const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
@@ -69,3 +69,23 @@ function generateSMAMId() {
     // Convert to string and pad with leading zeros to ensure it's 3 digits
     return `${prefix}${String(number).padStart(3, '0')}/${String(suffix).padStart(3, '0')}`;
 }
+
+function downloadIdCardAsImage() {
+    const idCard = document.querySelector('.id-container');
+    
+    html2canvas(idCard, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        removeContainer: true,
+        logging: false,
+        letterRendering: true
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'SMAM_ID_Card.png';
+        link.click();
+    });
+}
+
+downloadBtn.addEventListener('click', downloadIdCardAsImage);
