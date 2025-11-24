@@ -1,0 +1,53 @@
+
+/*---------------------------------------
+  GENERAL / WHOLE PAGE STYLING |              
+-----------------------------------------*/
+body {
+    background-color: rgb(0, 0, 0);
+    padding: 0rem;
+}
+
+/*---------------------------------------
+  HEADER|              
+-----------------------------------------*/
+nav {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+nav div.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+p.preamble {
+    text-align: center;
+    border-color: rgb(110, 5, 5);
+    border-style: solid;
+    border-width: 0rem 0.2rem 0.2rem 0rem ;
+}
+/*---------------------------------------
+  GENERAL TYPOGRAPHY|              
+-----------------------------------------*/
+
+h1, h2 {
+    text-align: center;
+}
+hr {
+    margin: -1rem;
+    
+}
+/*---------------------------------------
+  MAIN|              
+-----------------------------------------*/
+main {
+    background-image: url(Images/law-library.webp);
+    background-size: cover;
+    height: 100vh; /*will be removed later*/
+}
+div.main-background {
+     backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.486);
+    height: 100vh; /*will be removed later*/
+}

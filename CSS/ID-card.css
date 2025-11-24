@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    /* was 20px */
+}
+
+.id-container {
+    background-image: url(/Images/smam_logoj.webp);
+    padding: 1.5rem;
+    /* was 15px */
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.id-card {
+    width: 100%;
+    max-width: 60rem;
+    /* ~600px */
+    background: white;
+    border: 0.3rem solid black;
+    /* was 3px */
+    padding: 2rem;
+    /* was 20px */
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    /* was 15px */
+    margin-bottom: 2rem;
+    /* was 20px */
+    padding-bottom: 1.5rem;
+    /* was 15px */
+    border-bottom: 0.2rem solid #333;
+    /* was 2px */
+}
+
+.logo {
+    width: 8rem;
+    /* was 80px */
+    height: 8rem;
+    /* was 80px */
+    background: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    /* was 12px */
+    text-align: center;
+    padding: 0.5rem;
+    /* was 5px */
+    border: 0.2rem solid #333;
+    /* was 2px */
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header-text h1 {
+    font-size: 2.2rem;
+    /* was 22px */
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+    /* was 5px */
+    font-weight: bold;
+}
+
+.header-text h2 {
+    font-size: 1.8rem;
+    /* was 18px */
+    color: #8B4513;
+    margin-bottom: 0.8rem;
+    /* was 8px */
+}
+
+.motto {
+    font-size: 1.4rem;
+    /* was 14px */
+    color: #666;
+    font-weight: bold;
+}
+
+
+.content {
+    display: flex;
+    gap: 2rem;
+    /* was 20px */
+    position: relative;
+    z-index: 2;
+    align-items: flex-start;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.id-title {
+    font-size: 2rem;
+    /* was 20px */
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    /* was 15px */
+}
+
+.chip {
+    width: 6rem;
+    /* was 60px */
+    height: 4.5rem;
+    /* was 45px */
+    background: linear-gradient(135deg, #f4e4c1 0%, #e6d5a8 100%);
+    border: 0.1rem solid #999;
+    /* was 1px */
+    border-radius: 0.5rem;
+    /* was 5px */
+    margin-bottom: 2rem;
+    /* was 20px */
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+    /* was 3px */
+}
+
+.chip-line {
+    height: 0.8rem;
+    /* was 8px */
+    background: #c9b896;
+    margin: 0.1rem 0;
+    /* was 1px */
+    border-radius: 0.1rem;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 1rem;
+    /* was 10px */
+    font-size: 1.6rem;
+    /* was 16px */
+}
+
+.info-label {
+    width: 12rem;
+    /* was 120px */
+    font-weight: bold;
+}
+
+.info-value {
+    flex: 1;
+    font-weight: normal;
+}
+
+.smam-flag {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* was 10px */
+    margin: 1.5rem 0;
+    /* was 15px 0 */
+    font-size: 1.1rem;
+    /* was 11px */
+}
+
+.flag {
+    width: 2.5rem;
+    /* was 25px */
+    height: 1.5rem;
+    /* was 15px */
+    background: linear-gradient(to bottom, #000 33%, #ce1126 33%, #ce1126 66%, #339e35 66%);
+}
+
+.codes {
+    display: flex;
+    gap: 2rem;
+    /* was 20px */
+    margin-top: 1.5rem;
+    /* was 15px */
+    flex-wrap: wrap;
+}
+
+.code-box {
+    text-align: center;
+}
+
+.qr-code,
+.barcode {
+    width: 8rem;
+    /* was 80px */
+    height: 8rem;
+    /* was 80px */
+    background: white;
+    border: 0.1rem solid #000;
+    /* was 1px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    /* was 10px */
+    margin-bottom: 0.5rem;
+    /* was 5px */
+}
+
+.barcode {
+    height: 4rem;
+    /* was 40px */
+    width: 18rem;
+    /* was 180px */
+    background: repeating-linear-gradient(90deg, #000 0rem, #000 0.2rem, #fff 0.2rem, #fff 0.4rem);
+}
+
+.code-label {
+    font-size: 1.1rem;
+    /* was 11px */
+    font-weight: bold;
+}
+
+.right-section {
+    width: 18rem;
+    /* was 180px */
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    width: 18rem;
+    /* was 180px */
+    height: 20rem;
+    /* was 200px */
+    background: #e0e0e0;
+    border: 0.2rem solid #333;
+    /* was 2px */
+    margin-bottom: 1rem;
+    /* was 10px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    /* was 11px */
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 0.5rem;
+    /* was 5px */
+}
+
+.signature-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* was 5px */
+    font-size: 1.1rem;
+    /* was 11px */
+}
+
+.signature-label {
+    font-weight: bold;
+}
+
+.signature-line {
+    flex: 1;
+    border-bottom: 0.1rem solid #000;
+    /* was 1px */
+    height: 2rem;
+    /* was 20px */
+}
+
+/* Responsive tweaks */
+@media (max-width: 48rem) {
+
+    /* ~480px */
+    .content {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .right-section {
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .photo {
+        width: 60%;
+        height: auto;
+        aspect-ratio: 9 / 10;
+    }
+
+    .info-label {
+        width: 10rem;
+    }
+
+    .id-card {
+        padding: 1.2rem;
+    }
+
+    .logo {
+        width: 6.5rem;
+        height: 6.5rem;
+        font-size: 1.1rem;
+    }
+}

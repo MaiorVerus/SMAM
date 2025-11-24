@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /*62.5% of 16px = 10px */
+}
+
+:root {
+    --border-radius: 1rem;
+}
+/*---------------------------------------
+  GENERAL / WHOLE PAGE STYLING |              
+-----------------------------------------*/
+body {
+    margin: 0;
+    font-family: monospace;
+    overflow-x: hidden;
+    font-size: 1.6rem;
+
+}
+div.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 95%;
+}
+/*---------------------------------------
+  TYPOGRAPHY |              
+-----------------------------------------*/
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+hr {
+    height: 0.4rem;
+    /* border: none; */
+}
+
+.dropdown-container {
+  position: relative; /* So the dropdown positions relative to this */
+  display: inline-block; /* Keeps it compact */
+  cursor: pointer;
+}
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%; /* directly below the button */
+right: 0;
+  margin: 0.9rem 0;
+  padding: 1rem;
+  pointer-events: auto; /* Prevent clicks when hidden */
+  background-color: rgba(66, 70, 70, 0.836);
+  transition: all;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px); /* slide slightly up when hidden */
+}
+a {
+    color: currentColor;
+}
+div.dropdown a {
+    margin: 0.5em 1em;
+    display: inline-flex;
+    gap: 0.3em;
+}
+.show {
+  opacity: 1;
+}
+.hide {
+  opacity: 0;
+}
