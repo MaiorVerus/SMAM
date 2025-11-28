@@ -14,7 +14,6 @@ document.addEventListener("click", (e) => {
     if (!div.contains(e.target) && e.target !== btn) {
         div.classList.add("hide");
         div.classList.remove("show");
-        // console.log(e.target, div.className);
 
     }
 })

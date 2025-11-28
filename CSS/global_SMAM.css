@@ -24,6 +24,8 @@ body {
   font-family: monospace;
   overflow-x: hidden;
   font-size: 1.6rem;
+    padding: 0rem;
+
 
 }
 
@@ -32,7 +34,14 @@ div.wrapper {
   margin: 0 auto;
   width: 95%;
 }
-
+/*-------------------------------
+  HEADER |
+-----------------------------------------*/
+/* global_SMAM.css */
+header img,
+footer img {
+    width: 10rem;
+}
 /*---------------------------------------
   TYPOGRAPHY |              
 -----------------------------------------*/
@@ -54,55 +63,8 @@ hr {
   color: rgb(5, 252, 5);
 }
 
-/*---------------------------------------
-  DROPDOWN STYLING |
-  ---------------------*/
-.dropdown-container {
-  position: relative;
-  /* So the dropdown positions relative to this */
-  display: inline-block;
-  /* Keeps it compact */
-  cursor: pointer;
-}
-
-.dropdown {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 100%;
-  /* directly below the button */
-  right: 0;
-  margin: 0.9rem 0;
-  padding: 1rem;
-  pointer-events: auto;
-  /* Prevent clicks when hidden */
-  background-color: rgba(66, 70, 70, 0.836);
-  transition: all;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(-10px);
-  /* slide slightly up when hidden */
-}
-
-a {
-  color: currentColor;
-}
-
-div.dropdown a {
-  margin: 0.5em 1em;
-  display: inline-flex;
-  gap: 0.3em;
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hide {
-  opacity: 0;
-  transform: translateY(-10px);
+i {
+   font-size: 1.6rem;
 }
 
 
@@ -132,11 +94,277 @@ footer {
   border-left: white 0.01rem solid;
 }
 
-footer img {
-  width: 10rem;
-}
 
 footer p.copyright {
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+/*---------------------------------------
+  DROPDOWN STYLING |
+  ---------------------*/
+/* Dropdown toggle button */
+.dropdown-btn {
+  padding: 12px 24px;
+  background-color: #5353ff;
+  color: #ffffff;
+  height: fit-content;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(83, 83, 255, 0.3);
+  position: relative;
+}
+
+.dropdown-btn:hover {
+  background-color: #4242dd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(83, 83, 255, 0.4);
+}
+
+.dropdown-btn:active {
+  transform: translateY(0);
+}
+
+/* Dropdown container */
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 1000;
+  margin-top: 10px;
+}
+nav {
+  position: relative;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown.show .card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown.hide .card {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+.card {
+  width: 100%;
+  max-width: 250px;
+  background-color: rgba(36, 40, 50, 1);
+  background-image: linear-gradient(139deg,
+      rgba(36, 40, 50, 1) 0%,
+      rgba(36, 40, 50, 1) 0%,
+      rgba(37, 28, 40, 1) 100%);
+  border-radius: 10px;
+  padding: clamp(10px, 3vw, 15px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 2vw, 10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card .separator {
+  border-top: 1.5px solid #42434a;
+  margin: 0 10px;
+}
+
+.card .list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 1.5vw, 8px);
+  padding: 0 clamp(8px, 2vw, 10px);
+}
+
+.card .list .element {
+  display: flex;
+  align-items: center;
+  color: #7e8590;
+  gap: clamp(8px, 2vw, 10px);
+  transition: all 0.3s ease-out;
+  padding: clamp(6px, 1.5vw, 8px) clamp(5px, 1.5vw, 7px);
+  border-radius: 6px;
+  cursor: pointer;
+  min-height: 36px;
+}
+
+.card .list .element i {
+  width: clamp(16px, 4vw, 19px);
+  height: clamp(16px, 4vw, 19px);
+  transition: all 0.3s ease-out;
+  flex-shrink: 0;
+}
+
+.card .list .element .label {
+  font-weight: 600;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card .list .element:hover {
+  background-color: #5353ff;
+  color: #ffffff;
+  transform: translate(1px, -1px);
+}
+
+.card .list .delete:hover {
+  background-color: #8e2a2a;
+}
+
+.card .list .element:active {
+  transform: scale(0.98);
+}
+
+.card .list:not(:last-child) .element:hover i {
+  color: #ffffff;
+}
+
+.card .list:last-child i {
+  color: #bd89ff;
+}
+
+.card .list:last-child .element {
+  color: #bd89ff;
+}
+
+.card .list:last-child .element:hover {
+  background-color: rgba(56, 45, 71, 0.836);
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+    width: calc(100% - 2rem);
+  }
+
+  .card .list .element {
+    min-height: 44px;
+    /* Better touch target */
+  }
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+  .card {
+    max-width: 280px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .card {
+    max-width: 300px;
+  }
+}
+
+/*---------------------------------------
+  TOOLTIPS |
+-----------------------------------------*/
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: crimson;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: bounce 0.6s infinite alternate;
+  z-index: 10;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.tooltip::after {
+  content: "WAIT!";
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  background: #333333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+  transform: rotate(15deg);
+}
+
+.tooltip-wrapper:hover .tooltip {
+  visibility: visible;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-50%) translateY(0px);
+  }
+
+  to {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.star {
+  position: absolute;
+  color: #ffd700;
+  animation: twinkle 1s infinite alternate;
+}
+
+.star:nth-child(1) {
+  top: -10px;
+  left: 10px;
+}
+
+.star:nth-child(2) {
+  top: 10px;
+  right: 10px;
+}
+
+.star:nth-child(3) {
+  bottom: -10px;
+  left: 30px;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
