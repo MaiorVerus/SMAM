@@ -10,7 +10,7 @@ export default function Footer (){
               className="fa-brands fa-whatsapp"></i> Whatsapp Group</a></p>
           </div>
           <div className="footer-right">
-            <img src="Images/smam_logoj.webp" alt="SMAM Logo" />
+            {/* <img src="./public/images/smam_logoj.webp" alt="SMAM Logo" /> */}
           </div>
         </div>
         <hr />

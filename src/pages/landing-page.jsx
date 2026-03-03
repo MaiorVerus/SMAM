@@ -1,16 +1,16 @@
 
 import { Link } from 'react-router-dom';
-import Footer from '../components/footer.jsx';
-import Nav from '../components/nav-dropdown.jsx';
+// import Footer from '../components/footer.jsx';
+// import Nav from '../components/nav-dropdown.jsx';
 
 export default function LandingPage() {
     return (
-        <>
+        <div className="landing-page-container">
       
             <header>
                 <div className="wrapper">
-                    <Nav />
-                    <img src="/Images/smam_logoj.webp" alt="SMAM Logo" />
+                    {/* <Nav /> */}
+                    {/* <img src="./public/images/smam_logoj.webp" alt="SMAM Logo" /> */}
                     <p><q>... musatitengele ife kokatiyesa, koma mutipulumuse ife kwa oyipayo</q></p>
                 </div>
             </header>
@@ -68,6 +68,12 @@ export default function LandingPage() {
                                             <p>Anzanu akugawana nzelu...</p>
                                         </div>
                                     </div>
+                                     <div className="services-div fourth">
+                                        <div className="services-div-text">
+                                            <h3>Ma services onse</h3>
+                                            <p>Zomwe timapanga ngat ma chairman...</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <p>Check</p>
                             </section>
@@ -101,7 +107,7 @@ export default function LandingPage() {
                                 <p>Masana abwino tiotche Kaye mbatata yodya pankhomaliro yi,</p>
                             </div>
                         </section>
-                        <section id="sign-up">
+                        {/* <section id="sign-up">
                             <div className="tooltip-wrapper">
                                 <p><a href="#join" id="cta-button">Tapangani sign in chairman</a></p>
                                 <div className="tooltip">
@@ -111,11 +117,13 @@ export default function LandingPage() {
                                     😉 Oops, page tikadakonzabe 🚧
                                 </div>
                             </div>
-                        </section>
+                        </section> */}
                     </div>
                 </div>
+                {/* <Footer /> */}
             </main>
-            <Footer />
-        </>
+            {/* <h4>hi, am testing</h4> */}
+            {/* <Footer /> */}
+        </div>
     );
 }

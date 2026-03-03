@@ -3,6 +3,18 @@
 -----------------------------------------*/
 body {
     background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* .landing-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+} */
+
+main {
+    flex: 1;
 }
 
 main,
@@ -17,7 +29,7 @@ div.post-article {
 }
 
 .main-background {
-    background-image: url(/Images/smam_logoj.webp);
+    background-image: url(./images/smam_logoj.webp);
 }
 
 
@@ -84,15 +96,15 @@ section#week-tips {
 }
 
 section div.services-div-wrapper div.services-div.first {
-    background-image: url(/Images/Priscianus.webp);
+    background-image: url(./images/Priscianus.webp);
 }
 
 .second {
-    background-image: url(/Images/news.webp);
+    background-image: url(./images/news.webp);
 }
 
 .third {
-    background-image: url(/Images/men_net_convo.webp);
+    background-image: url(./images/men_net_convo.webp);
 }
 
 section div.services-div-wrapper div.services-div {

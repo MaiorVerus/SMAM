@@ -20,11 +20,11 @@ html {
   GENERAL / WHOLE PAGE STYLING |              
 -----------------------------------------*/
 body {
-  margin: 0;
+  margin: 1;
   font-family: monospace;
   overflow-x: hidden;
   font-size: 1.6rem;
-    padding: 0rem;
+  padding: 0rem;
 
 
 }

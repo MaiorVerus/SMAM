@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// navigation dropdown component
+// remove unused page import; links should point to routes defined in App.jsx
+
 export default function Nav() {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -27,7 +30,7 @@ export default function Nav() {
                             </Link>
                         </li>
                         <li className="element">
-                            <Link to="./decrees">
+                            <Link to="/decrees">
                                 <i className="fa-solid fa-scale-balanced"></i>
                                 <p className="label">Statutes</p>
                             </Link>
@@ -45,6 +48,12 @@ export default function Nav() {
                             <Link to="/">
                                 <i className="fa-solid fa-newspaper"></i>
                                 <p className="label">Updates</p>
+                            </Link>
+                        </li>
+                         <li className="element delete">
+                            <Link to="/services">   {/* route defined in App.jsx */}
+                                <i className="fa-solid fa-newspaper"></i>
+                                <p className="label">Services</p>
                             </Link>
                         </li>
                     </ul>

@@ -1,19 +1,26 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/landing-page';
-import Decrees from './pages/decrees';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 
-import './css/global_SMAM.css'
-import './css/SMAM.css'
+import LandingPage from './pages/landing-page.jsx';
+import OurServicesPage from './pages/our-services-page.jsx';
+import Decrees from './pages/decrees.jsx';
+
+
+// import './css/global_SMAM.css'
+// import './css/SMAM.css'
+
+const router = createBrowserRouter([
+  
+  { path: "/", element: <Navigate to="/landing" /> },
+  { path: "/landing", element: <LandingPage /> },
+  // { path: "/services", element: <OurServicesPage /> },
+  // { path: "/decrees", element: <Decrees /> },
+  
+], { basename: "/SMAM/" });
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/decrees" element={<Decrees />} />
-    </Routes>
-    </BrowserRouter >
-  )
+    <RouterProvider router={router} />
+  );
 }
 
-export default App
+export default App; 

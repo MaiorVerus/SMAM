@@ -42,12 +42,12 @@ hr {
 -----------------------------------------*/
 /* remove this height:100vh form either */
 main {
-    background-image: url(/Images/law-library.webp);
+    /* background-image: url(./images/law-library.webp); */
     background-size: cover;
-    height: 100vh; /*will be removed later*/
+    /* height: 100vh; will be removed later */
 }
 div.main-background {
      backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.486);
-    height: 100vh; /*will be removed later*/
+    /* height: 100vh; will be removed later */
 }
