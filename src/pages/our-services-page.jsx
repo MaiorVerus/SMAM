@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../components/nav-dropdown.jsx';
-// import '../css/OurServicesPage.css';
+import Footer from '../components/footer.jsx';
+
+import '../css/global_SMAM.css';
+import '../css/our-services.css';
 
 
 export default function OurServicesPage() {
@@ -12,7 +15,7 @@ export default function OurServicesPage() {
             <header className="services-header">
                 <div className="wrapper">
                     <h1>SMAM Services</h1>
-                    <p>“Protecting the Chairman's Wealth Since 2024”</p>
+                    <p>“Protecting the Chairman's Wealth Since 2010”</p>
                 </div>
             </header>
 
@@ -57,9 +60,11 @@ export default function OurServicesPage() {
                         <h3>Get Your Official ID</h3>
                         <p>Unlock the full power of SMAM with a certified membership card. Digital and physical copies available for verified Chairmen.</p>
                     </div>
+                    <Link to="/membership">
                     <div className="id-badge">
                         SMAM ELITE ✅
                     </div>
+                    </Link>
                 </div>
 
                 <h2 className="section-title">Testimonials</h2>
@@ -69,7 +74,7 @@ export default function OurServicesPage() {
                         <b>— Chairman Jere, Lilongwe</b>
                     </div>
                     <div className="testimonial-card">
-                        "I used to be the 'Yes Man'. Now, oipayo knows better than to ask for 'lunch money'. I am free!"
+                        "I used to be the 'Yes Man'. Now, oipayo knows better ndipo sayelekeza kundipempha or K5. I am free!"
                         <b>— Chairman Phiri, Blantyre</b>
                     </div>
                 </div>
@@ -84,6 +89,7 @@ export default function OurServicesPage() {
                         ← Back to Homepage
                     </Link>
                 </section>
+                <Footer />
             </main>
         </div>
     );

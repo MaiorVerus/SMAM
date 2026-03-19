@@ -104,7 +104,10 @@ section div.services-div-wrapper div.services-div.first {
 }
 
 .third {
-    background-image: url(./images/men_net_convo.webp);
+    background-image: url(./images/men_night_forum.webp);
+}
+.fourth {
+    background-image: url(./images/gentlemen_working_night.webp);
 }
 
 section div.services-div-wrapper div.services-div {

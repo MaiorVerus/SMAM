@@ -20,7 +20,7 @@ html {
   GENERAL / WHOLE PAGE STYLING |              
 -----------------------------------------*/
 body {
-  margin: 1;
+  margin: 0rem;
   font-family: monospace;
   overflow-x: hidden;
   font-size: 1.6rem;
@@ -68,37 +68,6 @@ i {
 }
 
 
-/*---------------------------------------
-  FOOTER STYLING     |          
------------------------------------------*/
-footer {
-  background-color: black;
-  color: rgb(255, 254, 254);
-  padding: 1rem;
-}
-
-.footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.footer-right {
-  margin: 1rem 2rem 1rem 0rem;
-  padding-left: 2rem;
-  border-left: white 0.01rem solid;
-}
-
-
-footer p.copyright {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
 
 /*---------------------------------------
   DROPDOWN STYLING |
@@ -128,16 +97,30 @@ footer p.copyright {
   transform: translateY(0);
 }
 
+/* 
+  🔑 Fix #2 — was on <nav> before, which spans the full page width.
+  Moving position:relative here means the dropdown's absolute position 
+  is measured from the button wrapper, not the whole nav bar.
+*/
+.nav-menu-wrapper {
+  position: relative;
+  display: inline-block; /* shrink-wraps to button width */
+}
+
+/* nav no longer needs position:relative */
+nav {
+  /* position: relative; <-- REMOVED from here */
+}
+
 /* Dropdown container */
 .dropdown {
   position: absolute;
   top: 50px;
-  right: 0;
+  left: 0;       /* 🔑 Fix #2 — was `right: 0` (stuck to right edge of nav) */
+                 /* `left: 0` aligns to left edge of the wrapper/button   */
+                 /* Swap back to `right: 0` if your button sits on the right */
   z-index: 1000;
   margin-top: 10px;
-}
-nav {
-  position: relative;
 }
 
 .card {

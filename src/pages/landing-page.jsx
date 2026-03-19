@@ -1,16 +1,19 @@
 
 import { Link } from 'react-router-dom';
-// import Footer from '../components/footer.jsx';
-// import Nav from '../components/nav-dropdown.jsx';
+import Footer from '../components/footer.jsx';
+import Nav from '../components/nav-dropdown.jsx';
+import '../css/landing-pg-styles.css'
 
 export default function LandingPage() {
-    return (
+    return ( 
+        document.title === "SMAM | Home" ? null : document.title = "SMAM | Home",
+        <>
         <div className="landing-page-container">
-      
+
             <header>
                 <div className="wrapper">
-                    {/* <Nav /> */}
-                    {/* <img src="./public/images/smam_logoj.webp" alt="SMAM Logo" /> */}
+                    <Nav />
+                    <img src="./public/images/smam_logoj.webp" alt="SMAM Logo" />
                     <p><q>... musatitengele ife kokatiyesa, koma mutipulumuse ife kwa oyipayo</q></p>
                 </div>
             </header>
@@ -68,14 +71,16 @@ export default function LandingPage() {
                                             <p>Anzanu akugawana nzelu...</p>
                                         </div>
                                     </div>
-                                     <div className="services-div fourth">
-                                        <div className="services-div-text">
-                                            <h3>Ma services onse</h3>
-                                            <p>Zomwe timapanga ngat ma chairman...</p>
+                                    <Link to="/services">
+                                        <div className="services-div fourth">
+                                            <div className="services-div-text">
+                                                <h3>Ma services onse</h3>
+                                                <p>Zomwe timapanga ngat ma chairman...</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
-                                <p>Check</p>
+                                {/* <p>Check</p> */}
                             </section>
                         </div>
                         <section id="week-tips">
@@ -107,7 +112,7 @@ export default function LandingPage() {
                                 <p>Masana abwino tiotche Kaye mbatata yodya pankhomaliro yi,</p>
                             </div>
                         </section>
-                        {/* <section id="sign-up">
+                        <section id="sign-up">
                             <div className="tooltip-wrapper">
                                 <p><a href="#join" id="cta-button">Tapangani sign in chairman</a></p>
                                 <div className="tooltip">
@@ -117,13 +122,14 @@ export default function LandingPage() {
                                     😉 Oops, page tikadakonzabe 🚧
                                 </div>
                             </div>
-                        </section> */}
+                        </section>
                     </div>
                 </div>
                 {/* <Footer /> */}
             </main>
             {/* <h4>hi, am testing</h4> */}
-            {/* <Footer /> */}
+            <Footer />
         </div>
+        </>
     );
 }
