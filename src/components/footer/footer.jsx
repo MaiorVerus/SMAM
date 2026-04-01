@@ -1,6 +1,6 @@
 
 
-// import ''
+import './footer.css';
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
 
         {/* Column 1 — Brand */}
         <div className="footer-col footer-brand">
-          <img src="./public/images/smam_logoj.webp" alt="SMAM Logo" />
+          <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
           <p className="footer-tagline">"tipulumusen ife kwa oipayo"</p>
           <p className="footer-desc">Protecting chairman's wealth and interests.</p>
         </div>
@@ -39,7 +39,7 @@ export default function Footer() {
           <h4 className="footer-heading">Community</h4>
           <div className="footer-socials">
             <a href="#facebook" className="social-btn facebook">
-              <i className="fa-brands fa-facebook"></i> Facebook Group
+              <i className="fa-brands fa-facebook"></i> Facebook Page
             </a>
             <a href="https://chat.whatsapp.com/HJri4Uf7BBO4UE9bTmASiZ" className="social-btn whatsapp">
               <i className="fa-brands fa-whatsapp"></i> WhatsApp Group

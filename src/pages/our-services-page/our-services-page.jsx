@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Nav from '../components/nav-dropdown.jsx';
-import Footer from '../components/footer.jsx';
+import Nav from '../../components/nav/dropdown.jsx';
+import Footer from '../../components/footer/footer.jsx';
 
-import '../css/global-smam.css';
-import '../css/our-services.css';
+import '../../css/global-smam.css';
+import './our-services.css';
 
 
 export default function OurServicesPage() {

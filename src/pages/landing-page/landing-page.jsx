@@ -1,10 +1,10 @@
 
 import { Link } from 'react-router-dom';
-import Footer from '../components/footer.jsx';
-import Nav from '../components/nav-dropdown.jsx';
-import '../css/landing-pg-styles.css'
+import Footer from '../../components/footer/footer.jsx';
+import Nav from '../../components/nav/dropdown.jsx';
+import './landing-pg-styles.css';
 
-export default function LandingPage() {
+export default function LandingPage () {
     return ( 
         document.title === "SMAM | Home" ? null : document.title = "SMAM | Home",
         <>
@@ -13,7 +13,7 @@ export default function LandingPage() {
             <header>
                 <div className="wrapper">
                     <Nav />
-                    <img src="./public/images/smam_logoj.webp" alt="SMAM Logo" />
+                    <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
                     <p><q>... musatitengele ife kokatiyesa, koma mutipulumuse ife kwa oyipayo</q></p>
                 </div>
             </header>

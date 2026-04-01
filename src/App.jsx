@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import LandingPage from './pages/landing-page.jsx';
-import OurServicesPage from './pages/our-services-page.jsx';
+import LandingPage from './pages/landing-page/landing-page.jsx';
+import OurServicesPage from './pages/our-services-page/our-services-page.jsx';
 // import Decrees from './pages/decrees.jsx';
 
 
