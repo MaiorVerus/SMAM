@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Nav from '../components/nav-dropdown.jsx';
 import Footer from '../components/footer.jsx';
 
-import '../css/global_SMAM.css';
+import '../css/global-smam.css';
 import '../css/our-services.css';
 
 

@@ -13,6 +13,8 @@ html {
   --border-radius: 1rem;
   --border-thickness: 0.09rem;
   --box-shadow: 0 7px 17px rgba(91, 140, 255, 0.12);
+  --harlequin-green: rgba(70, 245, 17, 0.89);
+  --hunter-green: #355e3b;
 
 }
 

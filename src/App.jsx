@@ -5,7 +5,7 @@ import OurServicesPage from './pages/our-services-page.jsx';
 import Decrees from './pages/decrees.jsx';
 
 
-import './css/global_SMAM.css';
+import './css/global-smam.css';
 
 
 const router = createBrowserRouter([
