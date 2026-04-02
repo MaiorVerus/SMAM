@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # private annotations
- public/annotations.md
+public/annotations.md
