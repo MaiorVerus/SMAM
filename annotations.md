@@ -1,5 +1,5 @@
 # RECENT UPDATES
-- g
+- update `.gitignore` to untrack `annotations.md` file
 
 
 
