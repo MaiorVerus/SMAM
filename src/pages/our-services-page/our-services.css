@@ -1,6 +1,7 @@
 
 
 
+
 .services-container {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
@@ -10,11 +11,11 @@
     padding-bottom: 80px;
 }
 
-.services-header {
+header {
     background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
     color: #fff;
-    padding: 80px 20px;
-    text-align: center;
+    padding-bottom: 7rem;
+    /* text-align: center; */
     border-bottom: 4px solid #f1e7ab;
 }
 
@@ -31,12 +32,6 @@
     margin-top: 15px;
     font-size: 1.2rem;
     color: #ccc;
-}
-
-.wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .section-title {
@@ -64,7 +59,7 @@
 
 .service-card {
     background: #fff;
-    padding: 35px;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border-left: 6px solid var(--harlequin-green);
@@ -120,19 +115,24 @@
 }
 
 .id-text h3 {
-    color: #ffd700;
+    color: white;
     margin: 0 0 10px 0;
     font-size: 1.8rem;
 }
 
 .id-badge {
-    background: #ffd700;
+    background: var(--crimson);
     color: #000;
     padding: 15px 25px;
     border-radius: 8px;
     font-weight: 900;
     text-transform: uppercase;
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    transition: all 0.4s;
+}
+.id-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
 }
 
 .testimonials {
@@ -160,17 +160,17 @@
 }
 
 .cta-box {
-    background: #1a1a1a;
+    background-image: linear-gradient(black, rgb(40, 40, 40), black);
     color: white;
     padding: 3.75rem 1.25rem;
     border-radius: 1.25rem;
     margin-top: 5rem;
     text-align: center;
-    border: 0.125rem solid #ffd700;
+    border: 0.125rem solid var(--hunter-green);
 }
 
 .btn-gold {
-    background: #ffd700;
+    background: var(--harlequin-green);
     color: #1a1a1a;
     padding: 1.125rem 3.125rem;
     border-radius: 3.125rem;

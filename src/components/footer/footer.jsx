@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Column 1 — Brand */}
         <div className="footer-col footer-brand">
           <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
-          <p className="footer-tagline">"tipulumusen ife kwa oipayo"</p>
+          <p className="footer-tagline"><q>tipulumusen ife kwa oipayo</q></p>
           <p className="footer-desc">Protecting chairman's wealth and interests.</p>
         </div>
 

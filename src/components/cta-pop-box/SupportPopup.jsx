@@ -5,6 +5,10 @@ const STORAGE_KEY = 'supportPopupExpiry'
 const DAYS_UNTIL_RESHOWN = 1 //for now 1, in production 30
 
 function shouldShowPopup() {
+  // In development, always show for testing
+  if (import.meta.env.DEV) return true;
+
+  // In production, check localStorage expiry
   const expiry = localStorage.getItem(STORAGE_KEY)
   if (!expiry) return true
   return Date.now() > parseInt(expiry)
@@ -16,7 +20,7 @@ function markDismissed() {
 }
 
 export default function SupportPopup({
-  delay = 9000,
+  delay = 3000,
   youtubLink = '#',
   hireLink = '#',
   email = '#'
@@ -40,19 +44,20 @@ export default function SupportPopup({
   return (
     <div className="sp-overlay" role="dialog" aria-modal="true">
       <div className="sp-box">
-        <h2 className="sp-title">No ads. No payments. ☺</h2>
+        <h2 className="sp-title">No ads. No payments. 😇</h2>
 
-        <p className="sp-text">If you enjoy this site, you can still support it by:</p>
+        <p className="sp-text">But, if you enjoy this site, you can still support it by:</p>
 
         <ul className="sp-list">
           <li>
-            Following on social media and subscribe on{' '}
-            <a href={youtubLink} target="_blank" rel="noreferrer">
+            Following on social media and subscribe on Youtube 
+            {/* <a href={youtubLink} target="_blank" rel="noreferrer">
               YouTube
-            </a>
+            </a> */}
           </li>
           <li>
-            Hire <a href={hireLink} target="_blank" rel="noreferrer">us</a> to design your web
+            Hire us to design your web (or just send some love to our email)
+            {/* Hire <a href={hireLink} target="_blank" rel="noreferrer">us</a> to design your web */}
           </li>
           <li>Sending your wishes 🙏 and signing up</li>
         </ul>

@@ -7,12 +7,6 @@ body {
     padding: 0;
 }
 
-/* .landing-page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 90vh;
-} */
-
 main {
     flex: 1;
 }
@@ -77,9 +71,6 @@ header div.wrapper nav {
     z-index: 10;
 }
 
-/* img {
-    width: 10rem;
-} */
 
 
 /* SECTION STYLING */
@@ -149,7 +140,7 @@ section#sign-up {
 }
 
 section#sign-up a {
-    background-color: crimson;
+    background-color: var(--crimson);
     padding: 2rem;
     border-radius: 1rem;
     transition: all 0.3s linear;
@@ -157,7 +148,7 @@ section#sign-up a {
 }
 
 section#sign-up a:hover {
-    background-color: rgb(240, 72, 105);
+    background-color: var(--crimson-hover);
 }
 
 

@@ -15,6 +15,8 @@ html {
   --box-shadow: 0 7px 17px rgba(91, 140, 255, 0.12);
   --harlequin-green: rgba(70, 245, 17, 0.89);
   --hunter-green: #355e3b;
+  --crimson: rgb(220, 20, 60);
+  --crimson-hover: rgb(240, 72, 105);
 
 }
 
@@ -39,7 +41,6 @@ div.wrapper {
 /*-------------------------------
   HEADER |
 -----------------------------------------*/
-/* global_SMAM.css */
 header img,
 footer img {
     width: 10rem;
@@ -54,7 +55,6 @@ a {
 
 hr {
   height: 0.1rem;
-  /* border: none; */
 }
 
 .fa-facebook {
@@ -67,194 +67,6 @@ hr {
 
 i {
    font-size: 1.6rem;
-}
-
-
-
-/*---------------------------------------
-  DROPDOWN STYLING |
-  ---------------------*/
-/* Dropdown toggle button */
-.dropdown-btn {
-  padding: 12px 24px;
-  background-color: #5353ff;
-  color: #ffffff;
-  height: fit-content;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(83, 83, 255, 0.3);
-  position: relative;
-}
-
-.dropdown-btn:hover {
-  background-color: #4242dd;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(83, 83, 255, 0.4);
-}
-
-.dropdown-btn:active {
-  transform: translateY(0);
-}
-
-/* 
-  🔑 Fix #2 — was on <nav> before, which spans the full page width.
-  Moving position:relative here means the dropdown's absolute position 
-  is measured from the button wrapper, not the whole nav bar.
-*/
-.nav-menu-wrapper {
-  position: relative;
-  display: inline-block; /* shrink-wraps to button width */
-}
-
-/* nav no longer needs position:relative */
-nav {
-  /* position: relative; <-- REMOVED from here */
-}
-
-/* Dropdown container */
-.dropdown {
-  position: absolute;
-  top: 50px;
-  left: 0;       /* 🔑 Fix #2 — was `right: 0` (stuck to right edge of nav) */
-                 /* `left: 0` aligns to left edge of the wrapper/button   */
-                 /* Swap back to `right: 0` if your button sits on the right */
-  z-index: 1000;
-  margin-top: 10px;
-}
-
-.card {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-}
-
-.dropdown.show .card {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown.hide .card {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  pointer-events: none;
-}
-
-.card {
-  width: 100%;
-  max-width: 250px;
-  background-color: rgba(36, 40, 50, 1);
-  background-image: linear-gradient(139deg,
-      rgba(36, 40, 50, 1) 0%,
-      rgba(36, 40, 50, 1) 0%,
-      rgba(37, 28, 40, 1) 100%);
-  border-radius: 10px;
-  padding: clamp(10px, 3vw, 15px) 0;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(8px, 2vw, 10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.card .separator {
-  border-top: 1.5px solid #42434a;
-  margin: 0 10px;
-}
-
-.card .list {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(6px, 1.5vw, 8px);
-  padding: 0 clamp(8px, 2vw, 10px);
-}
-
-.card .list .element {
-  display: flex;
-  align-items: center;
-  color: #7e8590;
-  gap: clamp(8px, 2vw, 10px);
-  transition: all 0.3s ease-out;
-  padding: clamp(6px, 1.5vw, 8px) clamp(5px, 1.5vw, 7px);
-  border-radius: 6px;
-  cursor: pointer;
-  min-height: 36px;
-}
-
-.card .list .element i {
-  width: clamp(16px, 4vw, 19px);
-  height: clamp(16px, 4vw, 19px);
-  transition: all 0.3s ease-out;
-  flex-shrink: 0;
-}
-
-.card .list .element .label {
-  font-weight: 600;
-  font-size: clamp(0.875rem, 2vw, 1rem);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card .list .element:hover {
-  background-color: #5353ff;
-  color: #ffffff;
-  transform: translate(1px, -1px);
-}
-
-.card .list .delete:hover {
-  background-color: #8e2a2a;
-}
-
-.card .list .element:active {
-  transform: scale(0.98);
-}
-
-.card .list:not(:last-child) .element:hover i {
-  color: #ffffff;
-}
-
-.card .list:last-child i {
-  color: #bd89ff;
-}
-
-.card .list:last-child .element {
-  color: #bd89ff;
-}
-
-.card .list:last-child .element:hover {
-  background-color: rgba(56, 45, 71, 0.836);
-}
-
-/* Mobile optimizations */
-@media (max-width: 480px) {
-  .card {
-    max-width: 100%;
-    width: calc(100% - 2rem);
-  }
-
-  .card .list .element {
-    min-height: 44px;
-    /* Better touch target */
-  }
-}
-
-/* Tablet and larger */
-@media (min-width: 768px) {
-  .card {
-    max-width: 280px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .card {
-    max-width: 300px;
-  }
 }
 
 /*---------------------------------------

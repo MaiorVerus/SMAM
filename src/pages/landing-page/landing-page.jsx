@@ -80,7 +80,6 @@ export default function LandingPage () {
                                         </div>
                                     </Link>
                                 </div>
-                                {/* <p>Check</p> */}
                             </section>
                         </div>
                         <section id="week-tips">
@@ -114,7 +113,7 @@ export default function LandingPage () {
                         </section>
                         <section id="sign-up">
                             <div className="tooltip-wrapper">
-                                <p><a href="#join" id="cta-button">Tapangani sign in chairman</a></p>
+                                <p><a href="" id="cta-button">Tapangani sign in chairman</a></p>
                                 <div className="tooltip">
                                     <span className="star">⭐</span>
                                     <span className="star">⭐</span>
@@ -125,9 +124,7 @@ export default function LandingPage () {
                         </section>
                     </div>
                 </div>
-                {/* <Footer /> */}
             </main>
-            {/* <h4>hi, am testing</h4> */}
             <Footer />
         </div>
         </>
