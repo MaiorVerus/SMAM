@@ -1,0 +1,122 @@
+/* ─── Overlay ─────────────────────────────────────────── */
+.sp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: sp-fade-in 0.35s ease forwards;
+}
+
+/* ─── Popup box ───────────────────────────────────────── */
+.sp-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2rem;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  animation: sp-slide-up 0.35s ease forwards;
+}
+
+/* ─── Title ───────────────────────────────────────────── */
+.sp-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: #1a1a1a;
+}
+
+/* ─── Body text ───────────────────────────────────────── */
+.sp-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444444;
+  margin: 0 0 8px;
+}
+
+/* ─── List ────────────────────────────────────────────── */
+.sp-list {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444444;
+  padding-left: 1.2rem;
+  margin: 4px 0 12px;
+}
+
+.sp-list li {
+  margin-bottom: 4px;
+}
+
+/* ─── Links ───────────────────────────────────────────── */
+.sp-list a,
+.sp-text a {
+  color: #1a6fcc;
+  text-decoration: underline;
+}
+
+.sp-list a:hover,
+.sp-text a:hover {
+  color: #0d4fa0;
+}
+
+/* ─── Close button ────────────────────────────────────── */
+.sp-close-btn {
+  margin-top: 1.25rem;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1a1a1a;
+  transition: background 0.15s ease;
+}
+
+.sp-close-btn:hover {
+  background: #f5f5f5;
+}
+
+.sp-close-btn:active {
+  transform: scale(0.98);
+}
+
+/* ─── Animations ──────────────────────────────────────── */
+@keyframes sp-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes sp-slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ─── Dark mode ───────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  .sp-box {
+    background: #1e1e1e;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  .sp-title {
+    color: #f0f0f0;
+  }
+
+  .sp-text,
+  .sp-list {
+    color: #aaaaaa;
+  }
+
+  .sp-close-btn {
+    border-color: #444444;
+    color: #f0f0f0;
+  }
+
+  .sp-close-btn:hover {
+    background: #2a2a2a;
+  }
+}
