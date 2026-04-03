@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 
 import LandingPage from './pages/landing-page/landing-page.jsx';
 import OurServicesPage from './pages/our-services-page/our-services-page.jsx';
-// import Decrees from './pages/decrees.jsx';
+import Decrees from './pages/decrees/decrees.jsx';
 import SupportPopup from './components/cta-pop-box/SupportPopup.jsx';
 
 
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Navigate to="/landing" />} />
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/services" element={<OurServicesPage />} />
-        {/* <Route path="/decrees" element={<Decrees />} /> */}
+        <Route path="/decrees" element={<Decrees />} />
       </Routes>
       <SupportPopup />
     </>

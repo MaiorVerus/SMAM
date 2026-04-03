@@ -1,8 +1,8 @@
 
 import { useEffect } from "react";
-// import Nav from "../components/nav-dropdown";
-// import Footer from "../components/footer";
-// import '../css/Smam_Decrees.css';
+import Nav from "../../components/nav/dropdown.jsx";
+import Footer from "../../components/footer/footer.jsx";
+import './decrees.css';
 
 export default function Decrees() {
     // Set the document title when the component mounts
