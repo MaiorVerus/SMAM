@@ -1,5 +1,9 @@
 # RECENT UPDATES
-- update `.gitignore` to untrack `annotations.md` file
+
+- create `_redirects` file
+- update base path in `vite.config.js` so both netllify and gh-pages work 
+- fix decrees page path errors
+
 
 
 
