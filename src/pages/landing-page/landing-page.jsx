@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import Footer from '../../components/footer/footer.jsx';
 import Nav from '../../components/nav/dropdown.jsx';
-import './landing-pg-styles.css';
+import css from './landing-pg-styles.module.css';
 
 export default function LandingPage () {
     return ( 
@@ -12,8 +12,8 @@ export default function LandingPage () {
 
             <header>
                 <div className="wrapper">
-                    <Nav />
-                    <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
+                    <Nav /> 
+                    <img src="./smam_logoj.webp" alt="SMAM Logo" />
                     <p><q>... musatitengele ife kokatiyesa, koma mutipulumuse ife kwa oyipayo</q></p>
                 </div>
             </header>
@@ -29,7 +29,7 @@ export default function LandingPage () {
                     </article>
                 </div>
                 <div className="main-background">
-                    <div className="post-article">
+                    <div className={css['post-article']}>
                         <div className="wrapper">
                             <hr />
                             <h2>Mbili ya SMAM</h2>

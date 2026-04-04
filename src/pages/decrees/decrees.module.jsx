@@ -1,27 +1,25 @@
-
 import { useEffect } from "react";
 import Nav from "../../components/nav/dropdown.jsx";
 import Footer from "../../components/footer/footer.jsx";
-import './decrees.css';
+import styles from './decrees.module.css';
 
 export default function Decrees() {
-    // Set the document title when the component mounts
     useEffect(() => {
         document.title = "SMAM Constitution";
-    }, []); // The empty dependency array ensures this runs only once
+    }, []);
 
     return (
-        <>
+        <div className={styles.decreesPage}>
             <header>
                 <Nav />
                 <hr />
                 <h1>Malamulo athu 💪🏽</h1>
-                <p className="preamble">Tinachiona chabwino ife kukulembelani malamulo athu okomawa. Ngakhale inu
+                <p className={styles.preamble}>Tinachiona chabwino ife kukulembelani malamulo athu okomawa. Ngakhale inu
                     mukuziwa kale, ife talemba kuti
                     tikukumbuseni.</p>
             </header>
             <main>
-                <div className="main-background">
+                <div className={styles.mainBackground}>
                     <div className="wrapper">
                         <h2>Kutanthauzila</h2>
                         <p><strong>Chairman:</strong> Awa nd mawu otchulila member. Ziwani kuti sitilola mathanyula kukhala member
@@ -55,6 +53,6 @@ export default function Decrees() {
                 </div>
             </main>
             <Footer />
-        </>
+        </div>
     )
 }

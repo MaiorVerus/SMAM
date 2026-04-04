@@ -23,7 +23,7 @@ div.post-article {
 }
 
 .main-background {
-    background-image: url(./images/smam_logoj.webp);
+    background-image: url(./smam_logoj.webp);
 }
 
 
@@ -84,18 +84,18 @@ section#week-tips {
 }
 
 section div.services-div-wrapper div.services-div.first {
-    background-image: url(./images/Priscianus.webp);
+    background-image: url(/images/Priscianus.webp);
 }
 
 .second {
-    background-image: url(./images/news.webp);
+    background-image: url(/images/news.webp);
 }
 
 .third {
-    background-image: url(./images/men_night_forum.webp);
+    background-image: url(/images/men_night_forum.webp);
 }
 .fourth {
-    background-image: url(./images/gentlemen_working_night.webp);
+    background-image: url(/images/gentlemen_working_night.webp);
 }
 
 section div.services-div-wrapper div.services-div {

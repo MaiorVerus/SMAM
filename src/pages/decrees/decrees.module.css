@@ -1,0 +1,30 @@
+.decreesPage {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    min-height: 100vh;
+}
+
+.decreesPage p.preamble {
+    text-align: center;
+    border-color: rgb(110, 5, 5);
+    border-style: solid;
+    border-width: 0rem 0.2rem 0.2rem 0rem;
+}
+
+.decreesPage h1,
+.decreesPage h2 {
+    text-align: center;
+}
+
+.decreesPage hr {
+    margin: 1.5rem 0;
+}
+
+.decreesPage main {
+    background-size: cover;
+}
+
+.decreesPage .mainBackground {
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.486);
+}

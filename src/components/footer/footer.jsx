@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="footer-col">
           <h4 className="footer-heading">Community</h4>
           <div className="footer-socials">
-            <a href="#facebook" className="social-btn facebook">
+            <a href="https://web.facebook.com/smam.official" className="social-btn facebook">
               <i className="fa-brands fa-facebook"></i> Facebook Page
             </a>
             <a href="https://chat.whatsapp.com/HJri4Uf7BBO4UE9bTmASiZ" className="social-btn whatsapp">
