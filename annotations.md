@@ -1,9 +1,9 @@
 # RECENT UPDATES
 
-- create `_redirects` file
-- update base path in `vite.config.js` so both netllify and gh-pages work 
-- fix decrees page path errors
-
+- fix link to home in footer
+- add facebook page url link in footer 
+- fix image path issue in header & landing page
+- used css modules
 
 
 
@@ -13,6 +13,8 @@
 
 # GIT NOTES
 ## untrack file
- `git rm --cached folder/mySecretFile.txt`
+ `git rm --cached folder/file.txt`
 ## track file
  `git add folder/file.txt`
+## stages all files
+ `git stage -A`
