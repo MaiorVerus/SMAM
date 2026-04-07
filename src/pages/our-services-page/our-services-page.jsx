@@ -60,7 +60,7 @@ export default function OurServicesPage() {
                                 <h3>Get Your Official ID</h3>
                                 <p>Unlock the full power of SMAM with a certified membership card. Digital and physical copies available for verified Chairmen.</p>
                             </div>
-                            <Link to="">
+                            <Link to="/id-generator">
                                 <div className={styles.idBadge}>
                                     SMAM ELITE <i className="fa-solid fa-check fa-beat"></i>
                                 </div>

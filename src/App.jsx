@@ -6,6 +6,7 @@ import './css/global-smam.css';
 const LandingPage = lazy(() => import('./pages/landing-page/landing-page.jsx'));
 const OurServicesPage = lazy(() => import('./pages/our-services-page/our-services-page.jsx'));
 const Decrees = lazy(() => import('./pages/decrees/decrees.module.jsx'));
+const IdGenerator = lazy(() => import('./pages/id-generator/id-generator.jsx'));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/services" element={<OurServicesPage />} />
         <Route path="/decrees" element={<Decrees />} />
+        <Route path='/id-generator' element={<IdGenerator />} />
       </Routes>
       <SupportPopup />
     </Suspense>
