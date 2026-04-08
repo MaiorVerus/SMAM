@@ -8,7 +8,7 @@ export default function LandingPage () {
     return ( 
         document.title === "SMAM | Home" ? null : document.title = "SMAM | Home",
         <>
-        <div className="landing-page-container">
+        <div className={css["landing-page-container"]}>
 
             <header>
                 <div className="wrapper">
@@ -28,7 +28,7 @@ export default function LandingPage () {
                             iliyonse.</p>
                     </article>
                 </div>
-                <div className="main-background">
+                <div className={css["main-background"]}>
                     <div className={css['post-article']}>
                         <div className="wrapper">
                             <hr />
@@ -50,30 +50,30 @@ export default function LandingPage () {
                             <section>
                                 <h2>Onani ma service athu ⬇</h2>
                                 <p>Ma services </p>
-                                <div className="services-div-wrapper">
+                                <div className={css["services-div-wrapper"]}>
                                     <Link to="/decrees">
-                                        <div className="services-div first">
-                                            <div className="services-div-text">
+                                        <div className={css["services-div"] + " " + css["first"]}>
+                                            <div className={css["services-div-text"]}>
                                                 <h3>Malamulo a SMAM</h3>
                                                 <p>Malamulo ali motele...</p>
                                             </div>
                                         </div>
                                     </Link>
-                                    <div className="services-div second">
-                                        <div className="services-div-text">
+                                    <div className={css["services-div"] + " " + css["second"]}>
+                                        <div className={css["services-div-text"]}>
                                             <h3>Ma Updates</h3>
                                             <p>News...</p>
                                         </div>
                                     </div>
-                                    <div className="services-div third">
-                                        <div className="services-div-text">
+                                    <div className={css["services-div"] + " " + css["third"]}>
+                                        <div className={css["services-div-text"]}>
                                             <h3>Forum</h3>
                                             <p>Anzanu akugawana nzelu...</p>
                                         </div>
                                     </div>
                                     <Link to="/services">
-                                        <div className="services-div fourth">
-                                            <div className="services-div-text">
+                                        <div className={css["services-div"] + " " + css["fourth"]}>
+                                            <div className={css["services-div-text"]}>
                                                 <h3>Ma services onse</h3>
                                                 <p>Zomwe timapanga ngat ma chairman...</p>
                                             </div>
@@ -82,7 +82,7 @@ export default function LandingPage () {
                                 </div>
                             </section>
                         </div>
-                        <section id="week-tips">
+                        <section id={css["week-tips"]}>
                             <div className="wrapper">
                                 <h4>Mawu anzelu</h4>
                                 <p>Mwaswera bwanji? Tiyeni tikambilane za phunzilo la week ino</p>
@@ -111,13 +111,13 @@ export default function LandingPage () {
                                 <p>Masana abwino tiotche Kaye mbatata yodya pankhomaliro yi,</p>
                             </div>
                         </section>
-                        <section id="sign-up">
+                        <section id={css["sign-up"]}>
                             <div className="tooltip-wrapper">
-                                <p><a href="" id="cta-button">Tapangani sign in chairman</a></p>
+                                <p><a href="" id={css["cta-button"]}>Tapangani sign in chairman</a></p>
                                 <div className="tooltip">
-                                    <span className="star">⭐</span>
-                                    <span className="star">⭐</span>
-                                    <span className="star">⭐</span>
+                                    <span className={css["star"]}>⭐</span>
+                                    <span className={css["star"]}>⭐</span>
+                                    <span className={css["star"]}>⭐</span>
                                     😉 Oops, page tikadakonzabe 🚧
                                 </div>
                             </div>

@@ -5,7 +5,7 @@ import './css/global-smam.css';
 
 const LandingPage = lazy(() => import('./pages/landing-page/landing-page.jsx'));
 const OurServicesPage = lazy(() => import('./pages/our-services-page/our-services-page.jsx'));
-const Decrees = lazy(() => import('./pages/decrees/decrees.module.jsx'));
+const Decrees = lazy(() => import('./pages/decrees/decrees.jsx'));
 const IdGenerator = lazy(() => import('./pages/id-generator/id-generator.jsx'));
 
 function App() {

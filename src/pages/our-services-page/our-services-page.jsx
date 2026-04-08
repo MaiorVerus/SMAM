@@ -13,7 +13,7 @@ export default function OurServicesPage() {
                     <div className={styles.servicesHeader}>
                         <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
                         <h1>SMAM Services</h1>
-                        <p>“Protecting the Chairman's Wealth Since 2010”</p>
+                        <p>“Kuteteza chuma cha chairman”</p>
                     </div>
                 </header>
 
@@ -28,18 +28,18 @@ export default function OurServicesPage() {
                                 <p>Our strict constitution ensures your pocket stays heavy and your stress stays low.</p>
                                 <ul className={styles.serviceList}>
                                     <li><strong>Tactical Seen:</strong> Advanced training on how to read messages without replying.</li>
-                                    <li><strong>The "No" Power:</strong> Psychological coaching to say "I don't have" with a straight face.</li>
-                                    <li><strong>Airtime Defense:</strong> Protecting your data bundles from "Please call me" requests.</li>
+                                    <li><strong>The "No" Power:</strong> Psychological training to say "Let me see what I can do" with a straight face.</li>
+                                    <li><strong>Airtime Defense:</strong> Protecting your data bundles.</li>
                                 </ul>
                             </article>
 
                             <article className={styles.serviceCard}>
                                 <h2><span className={styles.iconBox}><i className="fa-solid fa-shield-halved"></i></span> Expense Shield</h2>
-                                <p>A digital and mental barrier against unplanned financial requests from "oyipayo".</p>
+                                <p>A digital and mental protection from financial requests.</p>
                                 <ul className={styles.serviceList}>
-                                    <li><strong>Emergency Filter:</strong> Distinguishing between a real emergency and a "wanting a pizza" emergency.</li>
+                                    <li><strong>Emergency Filter:</strong> Kuziwa nthawi yeni yeni yothandiza</li>
                                     <li><strong>Budget Mastery:</strong> Tools to help you track how much you've saved by being a Chairman.</li>
-                                    <li><strong>Scripted Responses:</strong> Pre-written Malawian excuses for all seasons.</li>
+                                    <li><strong>Scripted Responses:</strong> Pre-written Malawian excuses for all seasons when she begs money.</li>
                                 </ul>
                             </article>
 
@@ -48,8 +48,8 @@ export default function OurServicesPage() {
                                 <p>Learn from Executive Chairmen who have mastered the art of stinginess.</p>
                                 <ul className={styles.serviceList}>
                                     <li><strong>Investment Tips:</strong> What to do with the money you saved.</li>
-                                    <li><strong>Chairman Alerts:</strong> Real-time news on financial traps in the city.</li>
-                                    <li><strong>Community Forum:</strong> A safe place to vent about "requests" without judgment.</li>
+                                    <li><strong>Chairman Alerts:</strong> Real-time news on emergencies in your area.</li>
+                                    <li><strong>Community Forum:</strong> A safe place to ask for advice.</li>
                                 </ul>
                             </article>
                         </div>
@@ -82,10 +82,10 @@ export default function OurServicesPage() {
                         <section className={styles.ctaBox}>
                             <h3>Join the Brotherhood Today</h3>
                             <p>Secure your future. Secure your wealth.</p>
-                            <a href="#" className={styles.btnGold}>BECOME A CHAIRMAN</a>
+                            <Link to="/id-generator" className={styles.btnGold}>BECOME A CHAIRMAN</Link>
                             <br />
 
-                            <Link to="#" style={{ color: '#aaa', marginTop: '30px', display: 'inline-block', textDecoration: 'none' }}>
+                            <Link to="/" style={{ color: '#aaa', marginTop: '30px', display: 'inline-block', textDecoration: 'none' }}>
                                 ← Back to Homepage
                             </Link>
                         </section>

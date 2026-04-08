@@ -9,7 +9,7 @@ header {
 }
 
 .id-container {
-    aspect-ratio: ;
+    /* aspect-ratio: ; */
 background-image: url(./smam_logoj.webp);
 border-radius: var(--border-radius);
 background-size: cover;
@@ -47,7 +47,7 @@ max-width: 700px;
 }
 
 .header-text h2 {
-    font-size: ;
+    /* font-size: ; */
     color: #8B4513;
     margin-bottom: 8px;
 }
@@ -313,7 +313,7 @@ width: 80px;
         grid-template-columns: 1fr;
     }
     input {
-        border-bottom: ;
+        /* border-bottom: ; */
     }
 
     .applicant-form {

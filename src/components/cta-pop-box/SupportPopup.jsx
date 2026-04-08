@@ -20,7 +20,7 @@ function markDismissed() {
 }
 
 export default function SupportPopup({
-  delay = 3000,
+  delay = 9000,
   youtubLink = '#',
   hireLink = '#',
   email = '#'

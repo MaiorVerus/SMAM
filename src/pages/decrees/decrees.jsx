@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import Nav from "../../components/nav/dropdown.jsx";
 import Footer from "../../components/footer/footer.jsx";
-import styles from './decrees.module.css';
+import css from './decrees.module.css';
+
+
 
 export default function Decrees() {
     useEffect(() => {
@@ -9,17 +11,17 @@ export default function Decrees() {
     }, []);
 
     return (
-        <div className={styles.decreesPage}>
+        <>
             <header>
                 <Nav />
                 <hr />
                 <h1>Malamulo athu 💪🏽</h1>
-                <p className={styles.preamble}>Tinachiona chabwino ife kukulembelani malamulo athu okomawa. Ngakhale inu
+                <p className={css["preamble"]}>Tinachiona chabwino ife kukulembelani malamulo athu okomawa. Ngakhale inu
                     mukuziwa kale, ife talemba kuti
                     tikukumbuseni.</p>
             </header>
             <main>
-                <div className={styles.mainBackground}>
+                <div className={css["o"]}>
                     <div className="wrapper">
                         <h2>Kutanthauzila</h2>
                         <p><strong>Chairman:</strong> Awa nd mawu otchulila member. Ziwani kuti sitilola mathanyula kukhala member
@@ -53,6 +55,6 @@ export default function Decrees() {
                 </div>
             </main>
             <Footer />
-        </div>
+        </>
     )
 }

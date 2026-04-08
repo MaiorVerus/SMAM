@@ -1,5 +1,5 @@
 
-
+import { Link } from 'react-router-dom';
 import './footer.css';
 
 export default function Footer() {
@@ -9,7 +9,10 @@ export default function Footer() {
 
         {/* Column 1 — Brand */}
         <div className="footer-col footer-brand">
-          <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
+          <Link to="/">
+            <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
+          </Link>
+
           <p className="footer-tagline"><q>tipulumusen ife kwa oipayo</q></p>
           <p className="footer-desc">Protecting chairman's wealth and interests.</p>
         </div>
@@ -18,10 +21,14 @@ export default function Footer() {
         <div className="footer-col">
           <h4 className="footer-heading">Quick Links</h4>
           <ul className="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/decrees">Statutes</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/">Updates</a></li>
+
+            <Link to="/">Home</Link>
+            <Link to="/decrees">Statutes</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/">Updates</Link>
+
+
+
           </ul>
         </div>
 
@@ -29,8 +36,8 @@ export default function Footer() {
         <div className="footer-col">
           <h4 className="footer-heading">Contact</h4>
           <ul className="footer-links">
-            <li><a href="mailto:info@smam.org">info@smam.org</a></li>
-            <li><a href="tel:+265000000000">+265 XXX XXX XXX</a></li>
+            <li><a href="mailto:info@smam.org">email us</a></li>
+            <li><a href="tel:+265991150007">+265 99 115 007</a></li>
           </ul>
         </div>
 
@@ -41,9 +48,10 @@ export default function Footer() {
             <a href="https://web.facebook.com/smam.official" className="social-btn facebook">
               <i className="fa-brands fa-facebook"></i> Facebook Page
             </a>
-            <a href="https://chat.whatsapp.com/HJri4Uf7BBO4UE9bTmASiZ" className="social-btn whatsapp">
+            <a  className="social-btn whatsapp">
               <i className="fa-brands fa-whatsapp"></i> WhatsApp Group
             </a>
+            {/** href="https://chat.whatsapp.com/HJri4Uf7BBO4UE9bTmASiZ"*/}
           </div>
         </div>
 
@@ -54,9 +62,10 @@ export default function Footer() {
       <div className="footer-bottom">
         <p className="copyright">&copy; SMAM {new Date().getFullYear()}. All rights reserved.</p>
         <div className="footer-bottom-links">
-          <a href="/privacy">Privacy Policy</a>
+          <Link to="/">Privacy Police</Link>
           <span>|</span>
-          <a href="/terms">Terms of Use</a>
+          <Link to="/">Terms of Use</Link>
+
         </div>
       </div>
     </footer>
