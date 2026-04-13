@@ -1,5 +1,8 @@
 
 import { Link } from 'react-router-dom';
+
+const smamLogo = new URL('/smam_logoj.webp', import.meta.url).href.replace(/\/src\/.*/, '/smam_logoj.webp');
+
 import './footer.css';
 
 export default function Footer() {
@@ -10,7 +13,7 @@ export default function Footer() {
         {/* Column 1 — Brand */}
         <div className="footer-col footer-brand">
           <Link to="/">
-            <img src="/smam_logoj.webp" alt="SMAM Logo" />
+            <img src={smamLogo} alt="SMAM Logo" />
           </Link>
 
           <p className="footer-tagline"><q>tipulumusen ife kwa oipayo</q></p>

@@ -2,6 +2,9 @@
 import { Link } from 'react-router-dom';
 import Footer from '../../components/footer/footer.jsx';
 import Nav from '../../components/nav/dropdown.jsx';
+
+const smamLogo = new URL('/smam_logoj.webp', import.meta.url).href.replace(/\/src\/.*/, '/smam_logoj.webp');
+
 import css from './landing-pg-styles.module.css';
 
 export default function LandingPage () {
@@ -13,7 +16,7 @@ export default function LandingPage () {
             <header>
                 <div className="wrapper">
                     <Nav /> 
-                    <img src="/smam_logoj.webp" alt="SMAM Logo" />
+                    <img src={smamLogo} alt="SMAM Logo" />
                     <p><q>... musatitengele ife kokatiyesa, koma mutipulumuse ife kwa oyipayo</q></p>
                 </div>
             </header>

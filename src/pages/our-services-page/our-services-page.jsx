@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../../components/nav/dropdown.jsx';
 import Footer from '../../components/footer/footer.jsx';
+
+const smamLogo = new URL('/smam_logoj.webp', import.meta.url).href.replace(/\/src\/.*/, '/smam_logoj.webp');
+
 import styles from './our-services.module.css';
 
 export default function OurServicesPage() {
@@ -11,7 +14,7 @@ export default function OurServicesPage() {
                 <header>
                     <Nav />
                     <div className={styles.servicesHeader}>
-                        <img src="/smam_logoj.webp" alt="SMAM Logo" />
+                        <img src={smamLogo} alt="SMAM Logo" />
                         <h1>SMAM Services</h1>
                         <p>“Kuteteza chuma cha chairman”</p>
                     </div>
