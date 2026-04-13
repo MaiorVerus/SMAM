@@ -345,7 +345,12 @@ span.disclaimer-tag {
     background-color: red;
     padding: 0.6rem;
     border-radius: var(--border-radius);
-    
+    cursor: help;
+    transition: 0.2s cubic-bezier(0.39, 0.34, 0.29, 0.75);
+}
+span.disclaimer-tag:hover {
+    border: solid rgb(247, 83, 83) ;
+
 }
 
 .premium-steps li a {

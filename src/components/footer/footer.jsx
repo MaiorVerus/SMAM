@@ -28,6 +28,7 @@ export default function Footer() {
             <Link to="/">Home</Link>
             <Link to="/decrees">Statutes</Link>
             <Link to="/services">Services</Link>
+            <Link to="/id-generator">ID Generator</Link>
             <Link to="/">Updates</Link>
 
 

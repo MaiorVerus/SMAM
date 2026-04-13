@@ -17,7 +17,8 @@ export default function IdGenerator() {
         position: ": MSUNGI CHUMA",
         location: ": BLANTYRE",
         idNumber: ": KU2/502",
-        photoUrl: ""
+        photoUrl: "",
+        signature: "Chaka chatha kale ichi ndikwatira next year"
     });
 
     // State to manage the form inputs
@@ -65,7 +66,8 @@ export default function IdGenerator() {
             position: `: ${formData.position.toUpperCase()}`,
             location: `: ${formData.location.toUpperCase()}`,
             idNumber: `: ${generateSMAMId()}`,
-            photoUrl: formData.photo ? URL.createObjectURL(formData.photo) : ""
+            photoUrl: formData.photo ? URL.createObjectURL(formData.photo) : "",
+            signature: formData.signature ? formData.signature : "Chaka chatha kale ichi ndikwatira next year"
         });
         setShowDownloadBtn(true);
     };
@@ -176,7 +178,7 @@ Preserve everything else exactly — the monochrome card background, font style 
                                         <div className={css["signature-box"]}>
                                             <span className={css["signature-label"]}>SIGNATURE</span>
                                             <div className={css["signature-line"]}>
-                                                <div className={css["tagline"]}>Chaka chatha kale ichi ndikwatira next year</div>
+                                                <div className={css["tagline"]}>{cardData.signature}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -201,7 +203,7 @@ Preserve everything else exactly — the monochrome card background, font style 
                     </div>
                     {/* ── OFFICIAL DISCLAIMER + INSTRUCTIONS ── */}
                     <section>
-    
+
 
                         <div className={css["disclaimer-notice"]}>
                             <div className="wrapper">
@@ -220,7 +222,7 @@ Preserve everything else exactly — the monochrome card background, font style 
                         </div>
 
                         <div className={css["premium-steps"]}>
-                        <div className="wrapper">
+                            <div className="wrapper">
                                 <h3>High-Detail Version — Manual Process</h3>
                                 <ol>
                                     <li>
@@ -230,9 +232,14 @@ Preserve everything else exactly — the monochrome card background, font style 
                                         or any tool capable of following instructions (unlike certain barcode renderers).
                                     </li>
                                     <li>
-                                        Upload your personal photo alongside the reference card.{" "}
-                                        <a href="/smam-reference-card.png" download>Download reference here.</a>
-                                    </li>
+  Upload your personal photo alongside the reference card.{" "}
+  <a 
+  href={`${import.meta.env.BASE_URL}smam-reference-id-card.jpg`} 
+  download="smam-reference-id-card.jpg"
+>
+  Download reference here.
+</a>
+</li>
                                     <li>
                                         Paste the prompt below into the image generator. Read it carefully — it is doing
                                         the heavy lifting on your behalf.
@@ -243,7 +250,7 @@ Preserve everything else exactly — the monochrome card background, font style 
                                     </li>
                                     <li>
                                         Should you encounter any difficulties, our support team is allegedly available.{" "}
-                                        <Link to="/contact">Contact us.</Link> Good luck, brother.
+                                        <Link to="#">Contact us.</Link> Good luck, brother.
                                     </li>
                                 </ol>
                             </div>
@@ -273,13 +280,16 @@ Preserve everything else exactly — the monochrome card background, font style 
                     <div className={css["applicant-form"]}>
                         <form onSubmit={handleGenerateId}>
                             <label htmlFor="name">Full Name:</label>
-                            <input type="text" id="name" name="name" placeholder="e.g Ndione kaye pena pake" value={formData.name} onChange={handleInputChange} required />
+                            <input type="text" id="name" name="name" placeholder="e.g Ndione kaye pena pake" value={formData.name} onChange={handleInputChange} maxLength={22} autoComplete='off' required />
 
                             <label htmlFor="position">Position:</label>
-                            <input type="text" id="position" name="position" placeholder="e.g Oona za free mode" value={formData.position} onChange={handleInputChange} />
+                            <input type="text" id="position" name="position" placeholder="e.g Oona za free mode" value={formData.position} onChange={handleInputChange} maxLength={22} autoComplete='off' />
 
                             <label htmlFor="location">Branch Location:</label>
-                            <input type="text" id="location" name="location" placeholder="e.g Brantyre" value={formData.location} onChange={handleInputChange} />
+                            <input type="text" id="location" name="location" placeholder="e.g Brantyre" value={formData.location} onChange={handleInputChange} maxLength={20} autoComplete='off' />
+
+                            <label htmlFor="signature">Signature:</label>
+                            <input type="text" id="signature" name="signature" placeholder="e.g chairman wa nyoo" value={formData.signature} onChange={handleInputChange} maxLength={45} autoComplete='off' />
 
                             <label htmlFor="photo">Upload Photo:</label>
                             <input type="file" id="photo" name="photo" accept="image/*" onChange={handlePhotoChange} />
