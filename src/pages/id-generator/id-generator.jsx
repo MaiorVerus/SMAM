@@ -123,7 +123,7 @@ Preserve everything else exactly — the monochrome card background, font style 
                         <div className={css["id-container"]} ref={idCardRef}>
                             <div className={css["id-card"]}>
                                 <div className={css["header"]}>
-                                    <img src="./smam_logoj.webp" alt="SMAM Logo" />
+                                    <img src="/smam_logoj.webp" alt="SMAM Logo" />
                                     <div className={css["header-text"]}>
                                         <h2>STINGY MEN ASSOCIATION  OF <br /><span>MALAWI</span> </h2>
                                         <div className={css["motto"]}>#MOTTO : Give them nothing </div>
@@ -156,7 +156,7 @@ Preserve everything else exactly — the monochrome card background, font style 
                                         <div className={css["codes"]}>
                                             <div className={css["code-box"]}>
                                                 <div className={css["qr-code"]}>
-                                                    <img src="./qr-code-smam.webp" alt="Smam qr code" />
+                                                    <img src="/qr-code-smam.webp" alt="Smam qr code" />
                                                 </div>
                                                 <div className={css["code-label"]}>Scan QR Code</div>
                                             </div>

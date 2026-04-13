@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Column 1 — Brand */}
         <div className="footer-col footer-brand">
           <Link to="/">
-            <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
+            <img src="/smam_logoj.webp" alt="SMAM Logo" />
           </Link>
 
           <p className="footer-tagline"><q>tipulumusen ife kwa oipayo</q></p>

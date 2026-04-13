@@ -10,7 +10,7 @@ header {
 
 .id-container {
     /* aspect-ratio: ; */
-background-image: url(./smam_logoj.webp);
+background-image: url(/smam_logoj.webp);
 border-radius: var(--border-radius);
 background-size: cover;
 display: flex;
@@ -171,7 +171,7 @@ width: 80px;
 .photo{
     width: 18rem;
     height: 19rem;
-    background-image: url(./images/bearded-man-icon.svg);
+    background-image: url(/images/bearded-man-icon.svg);
     background-size: cover;
     background-position: center;
     border: 2px solid #333;

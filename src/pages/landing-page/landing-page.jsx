@@ -13,7 +13,7 @@ export default function LandingPage () {
             <header>
                 <div className="wrapper">
                     <Nav /> 
-                    <img src="./smam_logoj.webp" alt="SMAM Logo" />
+                    <img src="/smam_logoj.webp" alt="SMAM Logo" />
                     <p><q>... musatitengele ife kokatiyesa, koma mutipulumuse ife kwa oyipayo</q></p>
                 </div>
             </header>

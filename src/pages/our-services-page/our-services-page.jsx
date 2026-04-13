@@ -11,7 +11,7 @@ export default function OurServicesPage() {
                 <header>
                     <Nav />
                     <div className={styles.servicesHeader}>
-                        <img src="./public/smam_logoj.webp" alt="SMAM Logo" />
+                        <img src="/smam_logoj.webp" alt="SMAM Logo" />
                         <h1>SMAM Services</h1>
                         <p>“Kuteteza chuma cha chairman”</p>
                     </div>
